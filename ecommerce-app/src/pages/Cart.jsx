@@ -12,6 +12,10 @@ const Cart = () => {
 
   useEffect(()=>{
 
+    if(products.length>0){
+
+    
+
      const tempData =[]
      for(const items in cartItems){
       for(const item in cartItems[items]){
@@ -24,8 +28,8 @@ const Cart = () => {
         }
       }
      }
-     setCartData(tempData)
-  },[cartItems])
+     setCartData(tempData)}
+  },[cartItems,products])
   
   return (
     <div className='bordet-t pt-14'>
